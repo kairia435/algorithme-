@@ -1,0 +1,78 @@
+ALGORITHME equal_numbers
+
+
+VAR
+
+set1,set2 : TABLEAU D'ENTIERS[20] ;
+
+somme : INTEGER := 0;
+
+i,j,n,k:INTEGER ;
+
+égal : BOOLÉEN :=faux ;
+
+
+
+COMMENCER
+
+Lire (n);
+
+Lire (k);
+
+Pour i DE 0 À n-1 Étape 1 FAIRE
+
+Lire ensemble1[i]
+
+END_FOR
+
+
+
+Pour j DE 0 À k-1 Étape 1 FAIRE
+
+Lire set2[j]
+
+END_FOR
+
+
+
+
+
+POUR i DE 0 À n-1 ÉTAPE 1 FAIRE
+
+TANT QUE (j< k) FAIRE
+
+SI (ensemble1[i]=ensemble2[j])
+
+ALORS
+
+égal := vrai ;
+
+PAUSE ;
+
+FIN SI
+
+j:= j + 1 ; 
+
+
+
+
+
+END_WHILE 
+
+
+
+SI (égal :=vrai)
+
+ALORS
+
+somme:= somme + set1[i] ;
+
+FIN SI
+
+END_FOR
+
+
+
+ecrit("somme:= ", somme*2); 
+
+FIN
